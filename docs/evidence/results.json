@@ -1,0 +1,4635 @@
+{
+  "summary": {
+    "mode": "fixture-engineering-ablation",
+    "date": "2026-10-22T23:02:12.292Z",
+    "cases": 22,
+    "elapsedMs": 31620,
+    "firstRuntime": "16/22 (72.7%)",
+    "firstBehavior": "8/18 (44.4%)",
+    "finalBehavior": "16/18 (88.9%)",
+    "repairSuccess": "10/12 (83.3%)",
+    "regressions": "0/12 (0.0%)",
+    "semantic": "16/18 (88.9%)",
+    "initialMedianMs": 734,
+    "initialP95Ms": 1105,
+    "totalMedianMs": 1063,
+    "totalP95Ms": 3188,
+    "modelCalls": 0,
+    "cost": null
+  },
+  "outcomes": [
+    {
+      "id": "binary-1",
+      "family": "binary",
+      "scenario": {
+        "name": "二分：命中",
+        "data": "1,3,5,7,9",
+        "parameter": "7",
+        "expected": {
+          "found": 3
+        }
+      },
+      "initial": {
+        "versionId": "8ce02dcc-d8dc-43bf-8864-a7141f39b83c",
+        "reportId": "5a6a8e9e-e1d2-4f30-bc20-9b10ffdaaf71",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "injected runtime failure"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "二分：命中",
+            "passed": false,
+            "error": "独立断言 found：预期 3，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "26cacec3-30ec-408f-b2fb-9b8f1e56fe58",
+        "reportId": "9b8f2f3d-56f2-4b0f-91a9-de5e2f2a0744",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：命中",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "8ce02dcc-d8dc-43bf-8864-a7141f39b83c",
+          "reportId": "5a6a8e9e-e1d2-4f30-bc20-9b10ffdaaf71",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "injected runtime failure"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "26cacec3-30ec-408f-b2fb-9b8f1e56fe58",
+          "reportId": "9b8f2f3d-56f2-4b0f-91a9-de5e2f2a0744",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：命中",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 1080,
+      "totalMs": 1959,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "binary-2",
+      "family": "binary",
+      "scenario": {
+        "name": "二分：不存在",
+        "data": "1,3,5",
+        "parameter": "4",
+        "expected": {
+          "found": -1
+        }
+      },
+      "initial": {
+        "versionId": "6ace1e8b-ddc8-4844-baa0-743e42c72d86",
+        "reportId": "c1a6c990-ec66-4f7d-986b-36127656dbd3",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：不存在",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 -99"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "507d85b0-2b4b-48b1-8771-3a1179ee7529",
+        "reportId": "2ecd6d7d-ea84-4082-9580-5b32cd742ee6",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：不存在",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "6ace1e8b-ddc8-4844-baa0-743e42c72d86",
+          "reportId": "c1a6c990-ec66-4f7d-986b-36127656dbd3",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 -99"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "507d85b0-2b4b-48b1-8771-3a1179ee7529",
+          "reportId": "2ecd6d7d-ea84-4082-9580-5b32cd742ee6",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：不存在",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 734,
+      "totalMs": 1493,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "binary-3",
+      "family": "binary",
+      "scenario": {
+        "name": "二分：空数组",
+        "data": "",
+        "parameter": "2",
+        "expected": {
+          "found": -1
+        }
+      },
+      "initial": {
+        "versionId": "fa619aba-b8bf-488b-8a04-ddf06621b057",
+        "reportId": "114f2c78-a997-4d64-9b98-051afc7aacf9",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：空数组",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "9bfa1beb-b536-41ba-b3db-76b3e67b1fd6",
+        "reportId": "416e44b9-35c1-4120-836e-5698dcccf5c0",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：空数组",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "fa619aba-b8bf-488b-8a04-ddf06621b057",
+          "reportId": "114f2c78-a997-4d64-9b98-051afc7aacf9",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "9bfa1beb-b536-41ba-b3db-76b3e67b1fd6",
+          "reportId": "416e44b9-35c1-4120-836e-5698dcccf5c0",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：空数组",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 819,
+      "totalMs": 1654,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "binary-4",
+      "family": "binary",
+      "scenario": {
+        "name": "二分：首元素",
+        "data": "1",
+        "parameter": "1",
+        "expected": {
+          "found": 0
+        }
+      },
+      "initial": {
+        "versionId": "1b7f076e-1248-43b5-82b2-c417ec54f878",
+        "reportId": "dab59b81-7577-4521-84df-46217fa5462f",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：首元素",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "1b7f076e-1248-43b5-82b2-c417ec54f878",
+        "reportId": "dab59b81-7577-4521-84df-46217fa5462f",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：首元素",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "1b7f076e-1248-43b5-82b2-c417ec54f878",
+          "reportId": "dab59b81-7577-4521-84df-46217fa5462f",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：首元素",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 800,
+      "totalMs": 800,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "binary-5",
+      "family": "binary",
+      "scenario": {
+        "name": "二分：无序输入拒绝",
+        "data": "3,1",
+        "parameter": "1",
+        "expected": {
+          "error": true
+        }
+      },
+      "initial": {
+        "versionId": "a4293464-23f7-4ad3-9c83-b7b8ea0ff9ec",
+        "reportId": "baf28a9f-e57d-476c-9844-cfbb31f69140",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "injected runtime failure"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": false,
+            "error": "应显示输入错误"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "735c01e1-9f06-4155-81eb-e60bcfa000f1",
+        "reportId": "14cc6f07-6abf-417c-85d8-d45a55be94f7",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "a4293464-23f7-4ad3-9c83-b7b8ea0ff9ec",
+          "reportId": "baf28a9f-e57d-476c-9844-cfbb31f69140",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "injected runtime failure"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": false,
+              "error": "应显示输入错误"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "735c01e1-9f06-4155-81eb-e60bcfa000f1",
+          "reportId": "14cc6f07-6abf-417c-85d8-d45a55be94f7",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 728,
+      "totalMs": 1452,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "lru-6",
+      "family": "lru",
+      "scenario": {
+        "name": "LRU：命中改变淘汰顺序",
+        "data": "A,B,A,C",
+        "parameter": "2",
+        "expected": {
+          "cache": [
+            "A",
+            "C"
+          ]
+        }
+      },
+      "initial": {
+        "versionId": "84c7514c-96bb-4b9f-b499-6294d7f53177",
+        "reportId": "277c112f-125d-4a57-a6ac-ee835e507f48",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：命中改变淘汰顺序",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "84c7514c-96bb-4b9f-b499-6294d7f53177",
+        "reportId": "277c112f-125d-4a57-a6ac-ee835e507f48",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：命中改变淘汰顺序",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "84c7514c-96bb-4b9f-b499-6294d7f53177",
+          "reportId": "277c112f-125d-4a57-a6ac-ee835e507f48",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：命中改变淘汰顺序",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 731,
+      "totalMs": 731,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "lru-7",
+      "family": "lru",
+      "scenario": {
+        "name": "LRU：零容量",
+        "data": "A,B",
+        "parameter": "0",
+        "expected": {
+          "cache": []
+        }
+      },
+      "initial": {
+        "versionId": "8a941ed9-c527-4670-b746-6c883178edbe",
+        "reportId": "77085c0a-33c0-46a7-94fd-2d9e8f201af2",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：零容量",
+            "passed": false,
+            "error": "独立断言 cache：预期 []，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "bccbfdf2-fda0-40e6-a3bf-6e8945b12699",
+        "reportId": "1fb9ba21-c2ff-45b0-a4d5-275ed4f8a285",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：零容量",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "8a941ed9-c527-4670-b746-6c883178edbe",
+          "reportId": "77085c0a-33c0-46a7-94fd-2d9e8f201af2",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：零容量",
+              "passed": false,
+              "error": "独立断言 cache：预期 []，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "bccbfdf2-fda0-40e6-a3bf-6e8945b12699",
+          "reportId": "1fb9ba21-c2ff-45b0-a4d5-275ed4f8a285",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：零容量",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 729,
+      "totalMs": 1435,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "lru-8",
+      "family": "lru",
+      "scenario": {
+        "name": "LRU：重复命中",
+        "data": "A,A,A",
+        "parameter": "2",
+        "expected": {
+          "cache": [
+            "A"
+          ]
+        }
+      },
+      "initial": {
+        "versionId": "a5d18fe5-2fdf-4ea4-84dd-00d8ac1d30be",
+        "reportId": "9160d99b-d042-4512-bf7d-6aa6f1cbb68b",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：重复命中",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "a5d18fe5-2fdf-4ea4-84dd-00d8ac1d30be",
+        "reportId": "9160d99b-d042-4512-bf7d-6aa6f1cbb68b",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：重复命中",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "a5d18fe5-2fdf-4ea4-84dd-00d8ac1d30be",
+          "reportId": "9160d99b-d042-4512-bf7d-6aa6f1cbb68b",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：重复命中",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 1063,
+      "totalMs": 1063,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "lru-9",
+      "family": "lru",
+      "scenario": {
+        "name": "LRU：空序列",
+        "data": "",
+        "parameter": "2",
+        "expected": {
+          "cache": []
+        }
+      },
+      "initial": {
+        "versionId": "efa86f00-1381-4286-b5ae-fc9783c931cb",
+        "reportId": "6999ea16-1032-4392-be28-a9250f6bd75d",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "injected runtime failure"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "LRU：空序列",
+            "passed": false,
+            "error": "独立断言 cache：预期 []，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "2bae9099-0233-4b90-b2ba-8a310838d053",
+        "reportId": "f25be4d9-7bbc-46f3-8a05-2f7552aac914",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：空序列",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "efa86f00-1381-4286-b5ae-fc9783c931cb",
+          "reportId": "6999ea16-1032-4392-be28-a9250f6bd75d",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "injected runtime failure"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "LRU：空序列",
+              "passed": false,
+              "error": "独立断言 cache：预期 []，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "2bae9099-0233-4b90-b2ba-8a310838d053",
+          "reportId": "f25be4d9-7bbc-46f3-8a05-2f7552aac914",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：空序列",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 694,
+      "totalMs": 1445,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "lru-10",
+      "family": "lru",
+      "scenario": {
+        "name": "LRU：负容量拒绝",
+        "data": "A",
+        "parameter": "-1",
+        "expected": {
+          "error": true
+        }
+      },
+      "initial": {
+        "versionId": "154ce000-c822-47d2-b3cc-8ec05d762e58",
+        "reportId": "2fd2b7e9-2e0e-49d6-ac2c-f147544ccfb5",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：负容量拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "154ce000-c822-47d2-b3cc-8ec05d762e58",
+        "reportId": "2fd2b7e9-2e0e-49d6-ac2c-f147544ccfb5",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "LRU：负容量拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "154ce000-c822-47d2-b3cc-8ec05d762e58",
+          "reportId": "2fd2b7e9-2e0e-49d6-ac2c-f147544ccfb5",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "LRU：负容量拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 726,
+      "totalMs": 726,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "rate-11",
+      "family": "rate",
+      "scenario": {
+        "name": "Counter：正常递增",
+        "data": "0,10,20",
+        "parameter": "5",
+        "expected": {
+          "rate": 2
+        }
+      },
+      "initial": {
+        "versionId": "99ffd46b-d31e-4629-bd0a-218fbc91fc3a",
+        "reportId": "e83351fa-c7a7-4fe4-a3d4-11ad3828b726",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：正常递增",
+            "passed": false,
+            "error": "独立断言 rate：预期 2，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "65e89677-1121-47e9-8fff-0d9ef94ff401",
+        "reportId": "70d484d7-0af9-446d-afff-79fee95fac2e",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：正常递增",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "99ffd46b-d31e-4629-bd0a-218fbc91fc3a",
+          "reportId": "e83351fa-c7a7-4fe4-a3d4-11ad3828b726",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：正常递增",
+              "passed": false,
+              "error": "独立断言 rate：预期 2，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "65e89677-1121-47e9-8fff-0d9ef94ff401",
+          "reportId": "70d484d7-0af9-446d-afff-79fee95fac2e",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：正常递增",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 773,
+      "totalMs": 1519,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "rate-12",
+      "family": "rate",
+      "scenario": {
+        "name": "Counter：重置",
+        "data": "10,2,6",
+        "parameter": "2",
+        "expected": {
+          "rate": 1.5
+        }
+      },
+      "initial": {
+        "versionId": "55a6a407-27d5-42eb-bc1a-b55dd72bf229",
+        "reportId": "1bcc8647-80e0-4a9c-a1cd-880a7b952a85",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：重置",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "55a6a407-27d5-42eb-bc1a-b55dd72bf229",
+        "reportId": "1bcc8647-80e0-4a9c-a1cd-880a7b952a85",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：重置",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "55a6a407-27d5-42eb-bc1a-b55dd72bf229",
+          "reportId": "1bcc8647-80e0-4a9c-a1cd-880a7b952a85",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：重置",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 768,
+      "totalMs": 768,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "rate-13",
+      "family": "rate",
+      "scenario": {
+        "name": "Counter：零间隔拒绝",
+        "data": "1,2",
+        "parameter": "0",
+        "expected": {
+          "error": true
+        }
+      },
+      "initial": {
+        "versionId": "6359e133-f525-4ccd-bae0-cdd04c17dc7f",
+        "reportId": "34a9c9f6-82cc-41ef-b6ff-443119c78042",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "injected runtime failure"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "Counter：零间隔拒绝",
+            "passed": false,
+            "error": "应显示输入错误"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "617f4f2a-c06c-40e5-9bd6-30712ac89d4d",
+        "reportId": "548fa835-c278-4166-9d4b-f5745c833b9e",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：零间隔拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "6359e133-f525-4ccd-bae0-cdd04c17dc7f",
+          "reportId": "34a9c9f6-82cc-41ef-b6ff-443119c78042",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "injected runtime failure"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "Counter：零间隔拒绝",
+              "passed": false,
+              "error": "应显示输入错误"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "617f4f2a-c06c-40e5-9bd6-30712ac89d4d",
+          "reportId": "548fa835-c278-4166-9d4b-f5745c833b9e",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：零间隔拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 600,
+      "totalMs": 1330,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "rate-14",
+      "family": "rate",
+      "scenario": {
+        "name": "Counter：单样本",
+        "data": "1",
+        "parameter": "5",
+        "expected": {
+          "rate": null
+        }
+      },
+      "initial": {
+        "versionId": "0e0cd7d8-8aef-496f-8176-94b0274911a7",
+        "reportId": "8afc4e11-5fc7-4ed2-a370-071fbda63cc4",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：单样本",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "0e0cd7d8-8aef-496f-8176-94b0274911a7",
+        "reportId": "8afc4e11-5fc7-4ed2-a370-071fbda63cc4",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：单样本",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "0e0cd7d8-8aef-496f-8176-94b0274911a7",
+          "reportId": "8afc4e11-5fc7-4ed2-a370-071fbda63cc4",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：单样本",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 776,
+      "totalMs": 776,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "rate-15",
+      "family": "rate",
+      "scenario": {
+        "name": "Counter：不增长",
+        "data": "4,4",
+        "parameter": "2",
+        "expected": {
+          "rate": 0
+        }
+      },
+      "initial": {
+        "versionId": "d2c339aa-3bf7-4526-811f-bca117e34fa1",
+        "reportId": "ef4ff229-4250-455a-9955-dbee65f3a2f4",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：不增长",
+            "passed": false,
+            "error": "独立断言 rate：预期 0，实际 undefined"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "952b2f7d-e98b-4c09-972d-173bda17ace0",
+        "reportId": "d4e6fa71-1e9e-40be-a7a5-d23d27c69a49",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "Counter：不增长",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "d2c339aa-3bf7-4526-811f-bca117e34fa1",
+          "reportId": "ef4ff229-4250-455a-9955-dbee65f3a2f4",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：不增长",
+              "passed": false,
+              "error": "独立断言 rate：预期 0，实际 undefined"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "952b2f7d-e98b-4c09-972d-173bda17ace0",
+          "reportId": "d4e6fa71-1e9e-40be-a7a5-d23d27c69a49",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "Counter：不增长",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 746,
+      "totalMs": 1476,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "event-16",
+      "family": "event",
+      "scenario": {
+        "name": "事件循环：同步、微任务、定时器",
+        "data": "",
+        "parameter": "0",
+        "expected": {
+          "order": [
+            "sync",
+            "microtask",
+            "timer"
+          ]
+        }
+      },
+      "initial": {
+        "versionId": "0af2d4e1-4f6f-48aa-9206-9f2847dfcaff",
+        "reportId": "f2fe6ae4-8f58-4f77-8831-095765ee34aa",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "事件循环：同步、微任务、定时器",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "0af2d4e1-4f6f-48aa-9206-9f2847dfcaff",
+        "reportId": "f2fe6ae4-8f58-4f77-8831-095765ee34aa",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "passed"
+          },
+          "semantic": {
+            "status": "passed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": true
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "事件循环：同步、微任务、定时器",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "0af2d4e1-4f6f-48aa-9206-9f2847dfcaff",
+          "reportId": "f2fe6ae4-8f58-4f77-8831-095765ee34aa",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "passed"
+            },
+            "semantic": {
+              "status": "passed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": true
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "事件循环：同步、微任务、定时器",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 738,
+      "totalMs": 738,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "plain-concept",
+      "family": "plain",
+      "initial": {
+        "versionId": "aa729172-cbe3-4957-bc77-f20d50370c63",
+        "reportId": "96664122-256d-4bcf-afbc-298bf7b94f52",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "injected runtime failure"
+            ]
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "61d465a4-5ba6-4ad3-a048-4a76a35d194a",
+        "reportId": "b10dc358-d215-49b6-b078-9b64c629d8e7",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "aa729172-cbe3-4957-bc77-f20d50370c63",
+          "reportId": "96664122-256d-4bcf-afbc-298bf7b94f52",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "injected runtime failure"
+              ]
+            },
+            "behavior": {
+              "status": "not_applicable"
+            },
+            "semantic": {
+              "status": "not_verified",
+              "note": "普通讲稿技术内容需人工审查"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "61d465a4-5ba6-4ad3-a048-4a76a35d194a",
+          "reportId": "b10dc358-d215-49b6-b078-9b64c629d8e7",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "not_applicable"
+            },
+            "semantic": {
+              "status": "not_verified",
+              "note": "普通讲稿技术内容需人工审查"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 1,
+      "initialMs": 456,
+      "totalMs": 885,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "plain-version",
+      "family": "plain",
+      "initial": {
+        "versionId": "e5b3f8ae-f711-491f-b076-1fea0d0c6459",
+        "reportId": "78887df0-6346-4958-8bd4-8b894cd3a9ff",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "e5b3f8ae-f711-491f-b076-1fea0d0c6459",
+        "reportId": "78887df0-6346-4958-8bd4-8b894cd3a9ff",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "e5b3f8ae-f711-491f-b076-1fea0d0c6459",
+          "reportId": "78887df0-6346-4958-8bd4-8b894cd3a9ff",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "not_applicable"
+            },
+            "semantic": {
+              "status": "not_verified",
+              "note": "普通讲稿技术内容需人工审查"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 519,
+      "totalMs": 519,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "missing-source",
+      "family": "plain",
+      "missing": true,
+      "initial": {
+        "versionId": "d0ca2ccb-0059-481d-be16-7369f6cf56df",
+        "reportId": "affc2ae4-517e-4b75-aee7-6337844816a6",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "d0ca2ccb-0059-481d-be16-7369f6cf56df",
+        "reportId": "affc2ae4-517e-4b75-aee7-6337844816a6",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "d0ca2ccb-0059-481d-be16-7369f6cf56df",
+          "reportId": "affc2ae4-517e-4b75-aee7-6337844816a6",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "not_applicable"
+            },
+            "semantic": {
+              "status": "not_verified",
+              "note": "普通讲稿技术内容需人工审查"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 442,
+      "totalMs": 442,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "missing",
+      "stopped": false
+    },
+    {
+      "id": "unsupported-cluster",
+      "family": "plain",
+      "unsupported": true,
+      "initial": {
+        "versionId": "cd74e262-1108-456e-a8a3-d48989688192",
+        "reportId": "ceaa1260-3d35-48e2-8cfe-008b07c9f9b9",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "cd74e262-1108-456e-a8a3-d48989688192",
+        "reportId": "ceaa1260-3d35-48e2-8cfe-008b07c9f9b9",
+        "passed": true,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "not_applicable"
+          },
+          "semantic": {
+            "status": "not_verified",
+            "note": "普通讲稿技术内容需人工审查"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "cd74e262-1108-456e-a8a3-d48989688192",
+          "reportId": "ceaa1260-3d35-48e2-8cfe-008b07c9f9b9",
+          "passed": true,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "not_applicable"
+            },
+            "semantic": {
+              "status": "not_verified",
+              "note": "普通讲稿技术内容需人工审查"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 0,
+      "initialMs": 551,
+      "totalMs": 551,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": false
+    },
+    {
+      "id": "persistent-dead-button",
+      "family": "binary",
+      "persistent": "dead",
+      "initial": {
+        "versionId": "b6d45723-2034-4b0d-b3b2-8ec104c3451e",
+        "reportId": "2956ac4c-5208-4b1d-867b-1e2a7a086fed",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：命中",
+            "passed": false,
+            "error": "独立断言 found：预期 3，实际 undefined"
+          },
+          {
+            "name": "二分：不存在",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：空数组",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：首元素",
+            "passed": false,
+            "error": "独立断言 found：预期 0，实际 undefined"
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "d1fb0f23-4fcc-46a0-84ab-8158be7ed3d7",
+        "reportId": "e4d2a78c-2afe-4a10-b968-05f49a129fc5",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "passed",
+            "errors": []
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": true
+          },
+          {
+            "name": "二分：命中",
+            "passed": false,
+            "error": "独立断言 found：预期 3，实际 undefined"
+          },
+          {
+            "name": "二分：不存在",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：空数组",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：首元素",
+            "passed": false,
+            "error": "独立断言 found：预期 0，实际 undefined"
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": true
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "b6d45723-2034-4b0d-b3b2-8ec104c3451e",
+          "reportId": "2956ac4c-5208-4b1d-867b-1e2a7a086fed",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "19401b84-3048-4a0b-ba23-ca88af1d3582",
+          "reportId": "4542ff0a-b128-4620-b82b-d072324e3b53",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "d1fb0f23-4fcc-46a0-84ab-8158be7ed3d7",
+          "reportId": "e4d2a78c-2afe-4a10-b968-05f49a129fc5",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "passed",
+              "errors": []
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": true
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": true
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 2,
+      "initialMs": 1105,
+      "totalMs": 3188,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": true
+    },
+    {
+      "id": "infinite-loop",
+      "family": "binary",
+      "persistent": "loop",
+      "initial": {
+        "versionId": "a0d65ead-2802-44ec-a936-1fdbeee8cbdf",
+        "reportId": "6c1d587b-7b95-4235-b53e-bdb31652117a",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "教学脚本超时，Worker 已终止"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "二分：命中",
+            "passed": false,
+            "error": "独立断言 found：预期 3，实际 undefined"
+          },
+          {
+            "name": "二分：不存在",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：空数组",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：首元素",
+            "passed": false,
+            "error": "独立断言 found：预期 0，实际 undefined"
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": false,
+            "error": "应显示输入错误"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "final": {
+        "versionId": "a2c06154-5324-46a9-a497-40ff441eb38c",
+        "reportId": "0664538b-a72b-453e-bd45-6edfe6053868",
+        "passed": false,
+        "layers": {
+          "runtime": {
+            "status": "failed",
+            "errors": [
+              "教学脚本超时，Worker 已终止"
+            ]
+          },
+          "behavior": {
+            "status": "failed"
+          },
+          "semantic": {
+            "status": "failed",
+            "note": "固定独立参考规则，仅验证该演示规则"
+          },
+          "presentation": {
+            "status": "passed"
+          }
+        },
+        "steps": [
+          {
+            "name": "执行按钮产生可见状态变化",
+            "passed": false,
+            "error": "点击执行后状态未变化"
+          },
+          {
+            "name": "重置恢复初始状态",
+            "passed": true
+          },
+          {
+            "name": "单步按钮产生中间状态",
+            "passed": false,
+            "error": "单步无效"
+          },
+          {
+            "name": "二分：命中",
+            "passed": false,
+            "error": "独立断言 found：预期 3，实际 undefined"
+          },
+          {
+            "name": "二分：不存在",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：空数组",
+            "passed": false,
+            "error": "独立断言 found：预期 -1，实际 undefined"
+          },
+          {
+            "name": "二分：首元素",
+            "passed": false,
+            "error": "独立断言 found：预期 0，实际 undefined"
+          },
+          {
+            "name": "二分：无序输入拒绝",
+            "passed": false,
+            "error": "应显示输入错误"
+          },
+          {
+            "name": "desktop 标题可见且无横向溢出",
+            "passed": true
+          },
+          {
+            "name": "mobile 标题可见且无横向溢出",
+            "passed": true
+          }
+        ],
+        "isolation": {
+          "storage": true,
+          "network": true
+        }
+      },
+      "versions": [
+        {
+          "versionId": "a0d65ead-2802-44ec-a936-1fdbeee8cbdf",
+          "reportId": "6c1d587b-7b95-4235-b53e-bdb31652117a",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "教学脚本超时，Worker 已终止"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": false,
+              "error": "应显示输入错误"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "689f4d84-ffaa-446e-ad43-eb613b99d433",
+          "reportId": "e5fa8015-e062-4e35-a00a-81d21946e631",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "教学脚本超时，Worker 已终止"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": false,
+              "error": "应显示输入错误"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        },
+        {
+          "versionId": "a2c06154-5324-46a9-a497-40ff441eb38c",
+          "reportId": "0664538b-a72b-453e-bd45-6edfe6053868",
+          "passed": false,
+          "layers": {
+            "runtime": {
+              "status": "failed",
+              "errors": [
+                "教学脚本超时，Worker 已终止"
+              ]
+            },
+            "behavior": {
+              "status": "failed"
+            },
+            "semantic": {
+              "status": "failed",
+              "note": "固定独立参考规则，仅验证该演示规则"
+            },
+            "presentation": {
+              "status": "passed"
+            }
+          },
+          "steps": [
+            {
+              "name": "执行按钮产生可见状态变化",
+              "passed": false,
+              "error": "点击执行后状态未变化"
+            },
+            {
+              "name": "重置恢复初始状态",
+              "passed": true
+            },
+            {
+              "name": "单步按钮产生中间状态",
+              "passed": false,
+              "error": "单步无效"
+            },
+            {
+              "name": "二分：命中",
+              "passed": false,
+              "error": "独立断言 found：预期 3，实际 undefined"
+            },
+            {
+              "name": "二分：不存在",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：空数组",
+              "passed": false,
+              "error": "独立断言 found：预期 -1，实际 undefined"
+            },
+            {
+              "name": "二分：首元素",
+              "passed": false,
+              "error": "独立断言 found：预期 0，实际 undefined"
+            },
+            {
+              "name": "二分：无序输入拒绝",
+              "passed": false,
+              "error": "应显示输入错误"
+            },
+            {
+              "name": "desktop 标题可见且无横向溢出",
+              "passed": true
+            },
+            {
+              "name": "mobile 标题可见且无横向溢出",
+              "passed": true
+            }
+          ],
+          "isolation": {
+            "storage": true,
+            "network": true
+          }
+        }
+      ],
+      "repairRounds": 2,
+      "initialMs": 2217,
+      "totalMs": 6665,
+      "calls": 0,
+      "tokens": 0,
+      "cost": null,
+      "sourceStatus": "fixture",
+      "stopped": true
+    }
+  ]
+}

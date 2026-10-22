@@ -1,0 +1,8 @@
+import { z } from 'zod';
+export const SpaceInput = z.object({topic:z.string().trim().min(1).max(200), goal:z.string().max(2000).default('建立直觉，掌握核心概念与边界'), background:z.string().max(1000).default('有基础编程经验'), depth:z.enum(['入门','进阶','深入']).default('入门'), version:z.string().max(100).default('未指定，版本敏感内容需核验'), references:z.array(z.string().url()).max(8).default([])});
+export const Chapter = z.object({id:z.string().regex(/^[a-zA-Z0-9_-]{1,80}$/), title:z.string().min(1).max(200), objective:z.string().min(1).max(2000), prerequisites:z.array(z.string()).max(12), points:z.array(z.string().min(1)).min(1).max(12)});
+export const Outline = z.object({chapters:z.array(Chapter).min(1).max(16)});
+export const Spec = z.object({title:z.string().min(1), goal:z.string().min(1), background:z.string().min(1), scope:z.string().min(1), version:z.string(), family:z.enum(['binary','lru','rate','event','plain','generic']), points:z.array(z.object({id:z.string(), name:z.string(), explanation:z.string().min(1), example:z.string(), misconception:z.string(), sourceIds:z.array(z.string())})).min(1), interaction:z.object({enabled:z.boolean(), purpose:z.string(), inputs:z.array(z.string()), states:z.array(z.string()), actions:z.array(z.string()), expected:z.array(z.string()), boundaries:z.array(z.string())}), assumptions:z.array(z.string()), checks:z.array(z.string()), unverified:z.array(z.string())});
+export const Artifact = z.object({html:z.string().min(20).max(150000), changeSummary:z.string().max(2000)});
+export const id = ()=> crypto.randomUUID();
+export const esc = s => String(s ?? '').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

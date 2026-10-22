@@ -1,0 +1,407 @@
+[
+  {
+    "id": "binary-1",
+    "family": "binary",
+    "scenario": {
+      "name": "二分：命中",
+      "data": "1,3,5,7,9",
+      "parameter": "7",
+      "expected": {
+        "found": 3
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "binary-2",
+    "family": "binary",
+    "scenario": {
+      "name": "二分：不存在",
+      "data": "1,3,5",
+      "parameter": "4",
+      "expected": {
+        "found": -1
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "binary-3",
+    "family": "binary",
+    "scenario": {
+      "name": "二分：空数组",
+      "data": "",
+      "parameter": "2",
+      "expected": {
+        "found": -1
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "binary-4",
+    "family": "binary",
+    "scenario": {
+      "name": "二分：首元素",
+      "data": "1",
+      "parameter": "1",
+      "expected": {
+        "found": 0
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "binary-5",
+    "family": "binary",
+    "scenario": {
+      "name": "二分：无序输入拒绝",
+      "data": "3,1",
+      "parameter": "1",
+      "expected": {
+        "error": true
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "lru-6",
+    "family": "lru",
+    "scenario": {
+      "name": "LRU：命中改变淘汰顺序",
+      "data": "A,B,A,C",
+      "parameter": "2",
+      "expected": {
+        "cache": [
+          "A",
+          "C"
+        ]
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "lru-7",
+    "family": "lru",
+    "scenario": {
+      "name": "LRU：零容量",
+      "data": "A,B",
+      "parameter": "0",
+      "expected": {
+        "cache": []
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "lru-8",
+    "family": "lru",
+    "scenario": {
+      "name": "LRU：重复命中",
+      "data": "A,A,A",
+      "parameter": "2",
+      "expected": {
+        "cache": [
+          "A"
+        ]
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "lru-9",
+    "family": "lru",
+    "scenario": {
+      "name": "LRU：空序列",
+      "data": "",
+      "parameter": "2",
+      "expected": {
+        "cache": []
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "lru-10",
+    "family": "lru",
+    "scenario": {
+      "name": "LRU：负容量拒绝",
+      "data": "A",
+      "parameter": "-1",
+      "expected": {
+        "error": true
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "rate-11",
+    "family": "rate",
+    "scenario": {
+      "name": "Counter：正常递增",
+      "data": "0,10,20",
+      "parameter": "5",
+      "expected": {
+        "rate": 2
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "rate-12",
+    "family": "rate",
+    "scenario": {
+      "name": "Counter：重置",
+      "data": "10,2,6",
+      "parameter": "2",
+      "expected": {
+        "rate": 1.5
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "rate-13",
+    "family": "rate",
+    "scenario": {
+      "name": "Counter：零间隔拒绝",
+      "data": "1,2",
+      "parameter": "0",
+      "expected": {
+        "error": true
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "rate-14",
+    "family": "rate",
+    "scenario": {
+      "name": "Counter：单样本",
+      "data": "1",
+      "parameter": "5",
+      "expected": {
+        "rate": null
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "rate-15",
+    "family": "rate",
+    "scenario": {
+      "name": "Counter：不增长",
+      "data": "4,4",
+      "parameter": "2",
+      "expected": {
+        "rate": 0
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "event-16",
+    "family": "event",
+    "scenario": {
+      "name": "事件循环：同步、微任务、定时器",
+      "data": "",
+      "parameter": "0",
+      "expected": {
+        "order": [
+          "sync",
+          "microtask",
+          "timer"
+        ]
+      }
+    },
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "plain-concept",
+    "family": "plain",
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "plain-version",
+    "family": "plain",
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "missing-source",
+    "family": "plain",
+    "missing": true,
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "unsupported-cluster",
+    "family": "plain",
+    "unsupported": true,
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "persistent-dead-button",
+    "family": "binary",
+    "persistent": "dead",
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  },
+  {
+    "id": "infinite-loop",
+    "family": "binary",
+    "persistent": "loop",
+    "fixedSourceVersion": "fixture-v1",
+    "expectedObjective": "观察核心规则与边界条件",
+    "manualChecklist": [
+      "关键解释是否被快照支持",
+      "简化是否明确",
+      "示例与边界条件是否正确",
+      "不把浏览器通过视为知识正确"
+    ]
+  }
+]

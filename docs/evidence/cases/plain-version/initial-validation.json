@@ -1,0 +1,44 @@
+{
+  "versionId": "e5b3f8ae-f711-491f-b076-1fea0d0c6459",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "not_applicable"
+    },
+    "semantic": {
+      "status": "not_verified",
+      "note": "普通讲稿技术内容需人工审查"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 312,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": true,
+  "id": "78887df0-6346-4958-8bd4-8b894cd3a9ff",
+  "updatedAt": "2026-10-22T23:02:01.443Z"
+}

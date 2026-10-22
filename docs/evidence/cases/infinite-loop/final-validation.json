@@ -1,0 +1,87 @@
+{
+  "versionId": "a2c06154-5324-46a9-a497-40ff441eb38c",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "failed",
+      "errors": [
+        "教学脚本超时，Worker 已终止"
+      ]
+    },
+    "behavior": {
+      "status": "failed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": false,
+      "error": "点击执行后状态未变化"
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": false,
+      "error": "单步无效"
+    },
+    {
+      "name": "二分：命中",
+      "passed": false,
+      "error": "独立断言 found：预期 3，实际 undefined"
+    },
+    {
+      "name": "二分：不存在",
+      "passed": false,
+      "error": "独立断言 found：预期 -1，实际 undefined"
+    },
+    {
+      "name": "二分：空数组",
+      "passed": false,
+      "error": "独立断言 found：预期 -1，实际 undefined"
+    },
+    {
+      "name": "二分：首元素",
+      "passed": false,
+      "error": "独立断言 found：预期 0，实际 undefined"
+    },
+    {
+      "name": "二分：无序输入拒绝",
+      "passed": false,
+      "error": "应显示输入错误"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [
+    "教学脚本超时，Worker 已终止"
+  ],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 2035,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "0664538b-a72b-453e-bd45-6edfe6053868",
+  "updatedAt": "2026-10-22T23:02:12.291Z"
+}

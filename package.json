@@ -1,0 +1,31 @@
+{
+  "name": "learnforge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/index.js",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "node scripts/smoke.js",
+    "eval": "node --env-file-if-exists=.env scripts/evaluate.js",
+    "setup": "npm install && playwright install chromium",
+    "check": "node scripts/check.js",
+    "test:security": "node scripts/security.js",
+    "doctor": "node --env-file-if-exists=.env scripts/doctor.js",
+    "eval:live": "node --env-file-if-exists=.env scripts/evaluate-live.js",
+    "eval:e2e": "node --env-file-if-exists=.env scripts/evaluate-live.js --e2e",
+    "test:integration": "node scripts/integration.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "express": "^5.1.0",
+    "ipaddr.js": "^2.2.0",
+    "playwright": "^1.56.0",
+    "ses": "^2.3.0",
+    "zod": "^4.1.12"
+  }
+}

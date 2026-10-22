@@ -1,0 +1,67 @@
+{
+  "versionId": "6359e133-f525-4ccd-bae0-cdd04c17dc7f",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "failed",
+      "errors": [
+        "injected runtime failure"
+      ]
+    },
+    "behavior": {
+      "status": "failed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": false,
+      "error": "点击执行后状态未变化"
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": false,
+      "error": "单步无效"
+    },
+    {
+      "name": "Counter：零间隔拒绝",
+      "passed": false,
+      "error": "应显示输入错误"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [
+    "injected runtime failure"
+  ],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 430,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "34a9c9f6-82cc-41ef-b6ff-443119c78042",
+  "updatedAt": "2026-10-22T23:01:56.319Z"
+}
