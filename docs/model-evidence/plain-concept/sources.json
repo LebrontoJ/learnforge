@@ -1,0 +1,16 @@
+[
+  {
+    "spaceId": "804fd398-62f1-48fc-ac42-6df8c6c9c712",
+    "title": "概念讲稿 · 演示资料",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development",
+    "text": "离线模式只能演示课程组织、阅读与版本流程。任意新主题的准确解释需要模型与实际读取的参考资料，不应把本段通用结构当作该主题的事实依据。",
+    "type": "fixture",
+    "status": "fixture",
+    "readAt": null,
+    "version": "fixture-v1",
+    "snapshotHash": "60ee8a5459a6620da831d572f07e31ab6462d1a8c30b5b789817d94c9f5a44c8",
+    "note": "开发者维护的固定摘要；未声称实时读取此链接",
+    "id": "f165647f-6364-424b-9341-a00422ffdc80",
+    "updatedAt": "2026-10-22T23:57:34.280Z"
+  }
+]

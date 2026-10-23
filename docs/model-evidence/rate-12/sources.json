@@ -1,0 +1,16 @@
+[
+  {
+    "spaceId": "cfbfbfb8-c9a4-43a7-ba52-1408ee0270b2",
+    "title": "Counter rate · 固定教学资料",
+    "url": "https://prometheus.io/docs/prometheus/latest/querying/functions/",
+    "text": "计数器累计递增，重启可能归零。教学模拟在等间隔样本间累加非负增量；负差按重置后当前值计入，再除以总秒数。此简化不实现 Prometheus rate 的窗口边界外推，不能作为实际 PromQL rate 实现。零时间跨度无定义。",
+    "type": "fixture",
+    "status": "fixture",
+    "readAt": null,
+    "version": "fixture-v1",
+    "snapshotHash": "3d4a64b010ff5446e985a8618824479fa8b55652735de44a746daa4c4a5aa43f",
+    "note": "开发者维护的固定摘要；未声称实时读取此链接",
+    "id": "1d1ef51b-5c93-489c-a192-3902e0f5bb42",
+    "updatedAt": "2026-10-22T23:49:05.115Z"
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "title": "精确 LRU 缓存淘汰：建立概念与直觉",
+  "goal": "理解精确 LRU 的核心逻辑、缓存溢出处理以及边界条件，并掌握通过交互式演示观察状态变更的能力。",
+  "background": "有基础编程经验",
+  "scope": "精确 LRU 算法的基本操作（访问、插入、淘汰）以及容量边界。",
+  "version": "固定评测规格 v1",
+  "family": "lru",
+  "points": [
+    {
+      "id": "lru-concept",
+      "name": "LRU 核心原理",
+      "explanation": "LRU (Least Recently Used) 算法基于“最近使用的条目在未来被再次使用的概率更高”这一假设。它通过将访问过的条目移至“最近使用端”，使得当容量达到上限时，处于“最久未使用端”的条目成为首个被淘汰的目标。",
+      "example": "假设容量为 3，依次访问 [A, B, C, A, D]。顺序变为：A (移至最近) -> [B, C, A] -> 插入 D 时淘汰 B -> [C, A, D]。",
+      "misconception": "认为 LRU 淘汰的是最早插入的元素（FIFO），忽略了访问操作会重置元素的活跃度。",
+      "sourceIds": [
+        "fcbbf916-bf05-4448-a40f-2550744a2a65"
+      ]
+    },
+    {
+      "id": "lru-boundaries",
+      "name": "边界条件处理",
+      "explanation": "当容量设为 0 时，任何插入操作都不会保留数据；当容量为 1 时，每次插入新键都会直接淘汰旧键。",
+      "example": "容量 0：任何访问序列均为空；容量 1：访问 [A, B] -> 缓存状态始终为 [B]。",
+      "misconception": "错误认为容量为 0 时系统会崩溃或报错，而实际上应表现为不持有任何键。",
+      "sourceIds": [
+        "fcbbf916-bf05-4448-a40f-2550744a2a65"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": true,
+    "purpose": "通过逐步执行访问序列，动态可视化缓存链表的变化及淘汰过程。",
+    "inputs": [
+      "capacity (int)",
+      "access_sequence (list of strings)"
+    ],
+    "states": [
+      "current_cache (ordered list)",
+      "evicted_key (string or null)"
+    ],
+    "actions": [
+      "step_forward",
+      "reset",
+      "update_capacity"
+    ],
+    "expected": [
+      "每一步操作后，能够明确观察到命中缓存还是未命中插入",
+      "观察到被淘汰的键是否正确地从链表末尾移除"
+    ],
+    "boundaries": [
+      "capacity = 0",
+      "capacity = 1",
+      "sequence length < capacity",
+      "sequence length > capacity"
+    ]
+  },
+  "assumptions": [
+    "缓存内仅存储键，不包含值（简化模型）",
+    "不处理 TTL (Time-To-Live)",
+    "忽略并发访问导致的状态不一致性"
+  ],
+  "checks": [
+    "确认访问命中后，键是否被移动到队列末尾（最近端）",
+    "确认溢出时，队列头部的元素是否被正确删除"
+  ],
+  "unverified": [
+    "本资料未涵盖 Redis 近似 LRU 的采样机制"
+  ]
+}

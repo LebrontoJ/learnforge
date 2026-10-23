@@ -1,0 +1,59 @@
+{
+  "title": "等间隔 Counter 重置感知平均增量教学",
+  "goal": "理解 Counter 在重置发生时的平均增量计算逻辑，掌握非外推（non-extrapolation）的简化计算方式。",
+  "background": "有基础编程经验",
+  "scope": "固定间隔下的 Counter 样本处理，特别是处理重置（Reset）情况下的平均增量计算。",
+  "version": "固定评测规格 v1",
+  "family": "rate",
+  "points": [
+    {
+      "id": "p1-logic",
+      "name": "平均增量计算原理",
+      "explanation": "当 Counter 值在样本间减小时，判定为重置。此时增量不按负差计算，而是直接取当前值作为重置后的增量，最后除以总采样时间跨度得出平均值。",
+      "example": "样本点：t0=0, val=10；t1=10, val=2（发生重置）。计算：增量取当前值2，总时长10s，平均速率 = 2/10 = 0.2/s。",
+      "misconception": "认为 Counter 重置时应该计算两点差值的绝对值或者忽略重置点。",
+      "sourceIds": [
+        "1d1ef51b-5c93-489c-a192-3902e0f5bb42"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": true,
+    "purpose": "通过交互观察 Counter 重置对平均增量计算的影响。",
+    "inputs": [
+      "样本序列 (t, val)",
+      "重置阈值触发点"
+    ],
+    "states": [
+      "当前样本时间戳",
+      "前一时刻 Counter 值",
+      "计算得出的平均速率"
+    ],
+    "actions": [
+      "添加新样本",
+      "手动修改特定样本值模拟重置",
+      "调整采样时间间隔"
+    ],
+    "expected": [
+      "正常递增：(val_now - val_prev) / (t_now - t_prev)",
+      "检测到重置：val_now / (t_now - t_prev)"
+    ],
+    "boundaries": [
+      "当 t_now == t_prev 时，速率无定义",
+      "仅适用于非负数值的计数器",
+      "本模型不包含 Prometheus rate 的窗口边界外推逻辑"
+    ]
+  },
+  "assumptions": [
+    "样本采集间隔是固定的",
+    "Counter 仅执行累加或归零操作"
+  ],
+  "checks": [
+    "能否正确区分递增与重置逻辑",
+    "能否正确处理重置后的除数逻辑"
+  ],
+  "unverified": [
+    "Prometheus 实际 rate 函数中的外推算法细节",
+    "大规模分布式系统下的数据乱序对计算的影响"
+  ]
+}

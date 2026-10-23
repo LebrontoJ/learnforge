@@ -1,0 +1,64 @@
+{
+  "versionId": "575f8586-b140-4549-ab09-0a506e9efe6d",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "failed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": false,
+      "error": "locator.click: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('run')\n"
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": false,
+      "error": "locator.click: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('reset')\n"
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": false,
+      "error": "locator.click: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('step')\n"
+    },
+    {
+      "name": "Counter：不增长",
+      "passed": false,
+      "error": "locator.fill: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('data')\n"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 7249,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "1110ab4f-364d-442b-a739-7652c0356451",
+  "updatedAt": "2026-10-22T23:54:02.118Z"
+}

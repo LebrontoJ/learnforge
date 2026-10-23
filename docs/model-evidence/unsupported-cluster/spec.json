@@ -1,0 +1,55 @@
+{
+  "title": "Kubernetes 真实集群执行（不支持，仅解释）",
+  "goal": "理解 Kubernetes 集群操作的概念、局限性与执行边界，通过理论构建直觉，明确本课程不进行实际集群交互。",
+  "background": "有基础编程经验",
+  "scope": "本章节仅限于概念解析。针对 Kubernetes 集群操作的基本原理进行讲解，强调在没有真实后端环境支撑下的学习方式与架构理解，不涉及任何集群交互指令的执行。",
+  "version": "固定评测规格 v1",
+  "family": "plain",
+  "points": [
+    {
+      "id": "concept-k8s-runtime-nature",
+      "name": "集群执行与概念模拟的边界",
+      "explanation": "Kubernetes 的核心在于声明式 API（Declarative API）。在教学中，我们通过理解控制循环（Control Loop）来模拟集群状态的达成，但并不实际调用 API Server 或操作物理节点。真实集群执行涉及复杂的认证、授权、网络通信与资源调度，而概念理解重点在于从 '预期状态' 到 '实际状态' 的调和过程。",
+      "example": "假设一个 Deployment 的声明文件，集群 Controller 会观察并触发副本创建，教学中我们将其抽象为 '状态转换图' 而非执行命令。",
+      "misconception": "认为学习 Kubernetes 必须随时连接到远程真实集群，否则无法理解其运作机制。",
+      "sourceIds": [
+        "4f2d8826-faf5-451b-911a-4da71c845dad"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": false,
+    "purpose": "由于不支持集群执行，本章节仅提供阅读与概念思考交互。",
+    "inputs": [
+      "YAML 配置文件文本",
+      "逻辑架构图"
+    ],
+    "states": [
+      "Desired State (预期)",
+      "Current State (实际)"
+    ],
+    "actions": [
+      "对比概念差异",
+      "分析状态调和逻辑"
+    ],
+    "expected": [
+      "理解 Kubernetes 声明式模型"
+    ],
+    "boundaries": [
+      "不生成任何 kubectl 指令",
+      "不进行任何网络通信",
+      "不验证集群可达性"
+    ]
+  },
+  "assumptions": [
+    "学习者已具备基础编程经验",
+    "学习者了解基础的客户端-服务器模型"
+  ],
+  "checks": [
+    "确认所有内容均处于理论层面",
+    "核实未包含任何自动触发集群交互的代码片段"
+  ],
+  "unverified": [
+    "外部资料提供的任何实时集群执行结果（源资料声明为固定摘要）"
+  ]
+}

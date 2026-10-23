@@ -1,0 +1,16 @@
+[
+  {
+    "spaceId": "faa599f4-e731-46db-934a-7966c65db1be",
+    "title": "LRU · 固定教学资料",
+    "url": "https://redis.io/docs/latest/develop/reference/eviction/",
+    "text": "本模拟采用精确 LRU，并非 Redis 的近似 LRU。容量是非负整数。每次访问将键移动到最近使用端。未命中时插入键，超过容量从最久未使用端淘汰。容量为零时不保留键。仅模拟键的访问，不包含 TTL、并发和实际存储。",
+    "type": "fixture",
+    "status": "fixture",
+    "readAt": null,
+    "version": "fixture-v1",
+    "snapshotHash": "5e1a83d27a06779631a4464e67fe68562ceeb2129637589f210fbf288880dd04",
+    "note": "开发者维护的固定摘要；未声称实时读取此链接",
+    "id": "f3577c55-db09-4afe-9e39-b2d88adca804",
+    "updatedAt": "2026-10-22T23:42:20.046Z"
+  }
+]

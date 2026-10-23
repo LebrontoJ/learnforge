@@ -1,0 +1,16 @@
+[
+  {
+    "spaceId": "a8960057-481f-4794-9c7f-889264f011f6",
+    "title": "二分查找 · 固定教学资料",
+    "url": "https://en.wikipedia.org/wiki/Binary_search_algorithm",
+    "text": "有序数组中维护闭区间 [left,right]，比较中点与目标，每步排除不可能含有目标的一半区间。left > right 时未找到。空数组立即返回 -1；重复元素允许返回任一匹配下标。前提是数组有序，时间复杂度 O(log n)。",
+    "type": "fixture",
+    "status": "fixture",
+    "readAt": null,
+    "version": "fixture-v1",
+    "snapshotHash": "383ad5d9fd67fc00cb5114d2add6fe0f6ed62520df373e170aa5c050773c5818",
+    "note": "开发者维护的固定摘要；未声称实时读取此链接",
+    "id": "bbfd2089-439e-456b-92d1-3216b14e21c1",
+    "updatedAt": "2026-10-22T23:18:05.447Z"
+  }
+]

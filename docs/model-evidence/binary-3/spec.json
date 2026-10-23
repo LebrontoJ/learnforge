@@ -1,0 +1,62 @@
+{
+  "title": "二分查找：建立概念与直觉",
+  "goal": "理解二分查找的核心逻辑、边界条件（尤其是空数组处理），并通过交互演示掌握查找过程。",
+  "background": "有基础编程经验",
+  "scope": "有序数组中的二分查找算法基础，包含基本逻辑、O(log n) 时间复杂度分析以及极端输入情况。",
+  "version": "固定评测规格 v1",
+  "family": "binary",
+  "points": [
+    {
+      "id": "point-01",
+      "name": "二分查找的基本原理",
+      "explanation": "二分查找通过维护闭区间 [left, right]，每次比较目标值与中点值，将查找空间减半。当 left > right 时，搜索结束且未找到。数组必须有序。",
+      "example": "在一个有序数组 [1, 3, 5, 7, 9] 中查找 7：初始 left=0, right=4, mid=2 (value 5)。因为 7 > 5，更新 left=3，最终定位到 index 3。",
+      "misconception": "常误以为可以用于无序数组，或者在区间更新时忽略了对 mid 的偏移导致死循环。",
+      "sourceIds": [
+        "f9944016-d056-4762-af45-51af2a941e09"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": true,
+    "purpose": "通过可视化分治过程，直观观察指针变化及搜索范围缩减，验证空数组及边界行为。",
+    "inputs": [
+      "sorted_array",
+      "target_value"
+    ],
+    "states": [
+      "left",
+      "right",
+      "mid"
+    ],
+    "actions": [
+      "step_forward",
+      "reset",
+      "modify_input"
+    ],
+    "expected": [
+      "当 target 在区间内时返回对应下标",
+      "当 target 不在区间内时返回 -1",
+      "O(log n) 步数内完成查找"
+    ],
+    "boundaries": [
+      "空数组应立即返回 -1",
+      "当 left > right 时应停止循环",
+      "处理数组首尾元素作为目标的情况"
+    ]
+  },
+  "assumptions": [
+    "输入数组必须预先排序",
+    "使用闭区间 [left, right] 逻辑",
+    "时间复杂度期望为 O(log n)"
+  ],
+  "checks": [
+    "是否正确处理了空数组输入",
+    "循环终止条件是否为 left > right",
+    "交互界面是否支持实时修改数组内容"
+  ],
+  "unverified": [
+    "未涉及浮点数类型数组的查找",
+    "未包含数组含大量重复元素时，查找特定重复元素位置的复杂场景"
+  ]
+}

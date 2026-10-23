@@ -1,0 +1,62 @@
+{
+  "versionId": "68afacba-1897-4cd3-bd5e-bf3ce5b375c6",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "failed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": true
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": false,
+      "error": "locator.click: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('step')\n"
+    },
+    {
+      "name": "Counter：单样本",
+      "passed": false,
+      "error": "Cannot read properties of null (reading 'rate')"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 2380,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "26e6a503-f152-451c-b480-b8df4872e703",
+  "updatedAt": "2026-10-22T23:52:42.375Z"
+}

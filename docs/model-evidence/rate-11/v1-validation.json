@@ -1,0 +1,65 @@
+{
+  "versionId": "74066cf5-0ada-426d-9cc2-988be7784bd8",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "failed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "failed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": false,
+      "error": "locator.textContent: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('output')\n"
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": false,
+      "error": "locator.click: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('reset')\n"
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": false,
+      "error": "locator.textContent: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('output')\n"
+    },
+    {
+      "name": "Counter：正常递增",
+      "passed": false,
+      "error": "locator.fill: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('data')\n"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": false,
+      "error": "页面明显横向溢出"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 7016,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "a2a32de1-31d1-4841-8d76-7f5123dbd0ec",
+  "updatedAt": "2026-10-22T23:48:27.031Z"
+}

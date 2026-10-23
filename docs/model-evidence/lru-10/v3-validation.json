@@ -1,0 +1,61 @@
+{
+  "versionId": "8506f3de-da8a-45cd-a1b3-e7cedc7401aa",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "passed"
+    },
+    "semantic": {
+      "status": "failed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": true
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": true
+    },
+    {
+      "name": "LRU：负容量拒绝",
+      "passed": false,
+      "error": "locator.fill: Timeout 1600ms exceeded.\nCall log:\n  - waiting for getByTestId('data')\n"
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 2366,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": false,
+  "id": "60f00437-3933-4b82-b373-1c6176ab0ab3",
+  "updatedAt": "2026-10-22T23:47:31.145Z"
+}

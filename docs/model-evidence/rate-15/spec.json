@@ -1,0 +1,60 @@
+{
+  "title": "等间隔 Counter 重置感知平均增量教学",
+  "goal": "理解在 Counter 重置场景下，如何通过感知负增量并将其视为当前值，计算等间隔内的平均增量速率。",
+  "background": "具有基础编程逻辑理解能力的开发者",
+  "scope": "专注于 Counter 重置（归零）后的逻辑处理，不涉及 Prometheus 的窗口外推（Extrapolation）机制。",
+  "version": "固定评测规格 v1",
+  "family": "rate",
+  "points": [
+    {
+      "id": "p-001",
+      "name": "Counter 重置与平均速率计算",
+      "explanation": "当计数器在采样点出现负向差值时（如从 100 变为 10），系统将其识别为重置，直接将新值（10）视为本次增量，而非处理为负增长。平均增量由总增量除以观察的总秒数得出。",
+      "example": "时间点 T1(v=100), T2(v=10)。正常差值为 -90，但在重置逻辑中，计算出的增量为 10，若跨度为 10 秒，速率则为 1 per second。",
+      "misconception": "认为所有的负向差值都应该被过滤或当作 0 处理，而忽略了重置后的累计效应。",
+      "sourceIds": [
+        "c87703b8-8ada-40af-ba69-68ff143ce2fb"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": true,
+    "purpose": "通过修改时间戳与 Counter 数值，直观观察重置逻辑下的速率波动。",
+    "inputs": [
+      "时间间隔 (seconds)",
+      "起始 Counter 值",
+      "结束 Counter 值"
+    ],
+    "states": [
+      "当前速率",
+      "是否发生重置",
+      "当前计算增量"
+    ],
+    "actions": [
+      "更新 Counter 值",
+      "触发计算"
+    ],
+    "expected": [
+      "负值输入触发重置处理逻辑",
+      "速率计算公式为 (EndValue / TimeDelta) 或 ((EndValue + StartValue) / TimeDelta)"
+    ],
+    "boundaries": [
+      "时间跨度为 0 时无定义",
+      "不包含 Prometheus 自动外推逻辑",
+      "仅处理非负增量与重置情况"
+    ]
+  },
+  "assumptions": [
+    "采样点是严格等间隔的",
+    "输入数值为非负整数",
+    "系统只识别单次重置后的增量"
+  ],
+  "checks": [
+    "能否正确区分普通增量与重置增量",
+    "能否在输入相同数值时正确识别速率为 0"
+  ],
+  "unverified": [
+    "此逻辑在超大规模高频数据下的性能表现",
+    "该算法在不同编程语言下的浮点数精度误差处理"
+  ]
+}

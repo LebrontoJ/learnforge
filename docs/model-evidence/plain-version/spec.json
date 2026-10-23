@@ -1,0 +1,43 @@
+{
+  "title": "HTTP 缓存的核心概念：建立概念与直觉",
+  "goal": "理解缓存的工作机制、关键响应头的作用以及常见的缓存策略边界。",
+  "background": "具有基础编程经验的开发者",
+  "scope": "本章节聚焦 HTTP 缓存的基本原理，涵盖缓存的目的、强缓存与协商缓存的区别。",
+  "version": "固定评测规格 v1",
+  "family": "plain",
+  "points": [
+    {
+      "id": "point-1",
+      "name": "HTTP 缓存的基本原理",
+      "explanation": "HTTP 缓存通过在浏览器或代理服务器中存储资源副本，减少对源服务器的请求。缓存分为强缓存（Expires/Cache-Control）和协商缓存（Last-Modified/ETag），前者直接使用本地副本，后者通过与服务器核对状态码（如 304）决定是否使用。",
+      "example": "当浏览器首次加载一张图片，服务器返回 Cache-Control: max-age=3600。在一小时内，浏览器再次访问该图片时，会直接从磁盘读取，不会发送网络请求。",
+      "misconception": "认为缓存仅仅是把文件存起来，而忽略了缓存是有‘新鲜度’（Freshness）和‘验证’（Validation）机制的。",
+      "sourceIds": [
+        "bb8c3947-4fbf-4b72-bdc0-7da4a36ea070"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": false,
+    "purpose": "无交互需求",
+    "inputs": [],
+    "states": [],
+    "actions": [],
+    "expected": [],
+    "boundaries": [
+      "不执行真实网络请求",
+      "不涉及集群配置"
+    ]
+  },
+  "assumptions": [
+    "用户已知晓基础的请求/响应模型",
+    "用户理解浏览器作为客户端的基本身份"
+  ],
+  "checks": [
+    "是否能够区分强缓存与协商缓存的行为差异",
+    "是否能正确识别缓存失效的触发条件"
+  ],
+  "unverified": [
+    "上述解释依据引用源 bb8c3947-4fbf-4b72-bdc0-7da4a36ea070，但该源仅为教学框架占位符，未包含具体的缓存协议技术细节，故概念深度依赖于通用的 HTTP 协议标准知识。"
+  ]
+}

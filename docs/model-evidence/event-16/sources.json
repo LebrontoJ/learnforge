@@ -1,0 +1,16 @@
+[
+  {
+    "spaceId": "27aeb239-1f2d-4b59-85aa-3a270eb8f8c4",
+    "title": "事件循环 · 固定教学资料",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide",
+    "text": "简化浏览器任务示例：先执行当前脚本同步日志，排队的微任务在当前任务结束后依次执行，随后执行下一定时器任务。示例顺序是 sync, microtask, timer。不模拟渲染时机、多任务源优先级或 Node.js nextTick。",
+    "type": "fixture",
+    "status": "fixture",
+    "readAt": null,
+    "version": "fixture-v1",
+    "snapshotHash": "dab802e3395234192ef3186a6f12315b64177b86a7add14a55d93992692007b2",
+    "note": "开发者维护的固定摘要；未声称实时读取此链接",
+    "id": "91b2ae25-ba9d-46c0-9ca4-5af3f80f8225",
+    "updatedAt": "2026-10-22T23:54:19.112Z"
+  }
+]

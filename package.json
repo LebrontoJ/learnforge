@@ -18,7 +18,10 @@
     "doctor": "node --env-file-if-exists=.env scripts/doctor.js",
     "eval:live": "node --env-file-if-exists=.env scripts/evaluate-live.js",
     "eval:e2e": "node --env-file-if-exists=.env scripts/evaluate-live.js --e2e",
-    "test:integration": "node scripts/integration.js"
+    "test:integration": "node scripts/integration.js",
+    "model:check": "node --env-file-if-exists=.env scripts/model-check.js",
+    "accept:free": "node scripts/run-free-acceptance.js",
+    "eval:export": "node --env-file-if-exists=.env scripts/export-model-evidence.js"
   },
   "dependencies": {
     "cheerio": "^1.1.2",

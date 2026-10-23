@@ -1,0 +1,60 @@
+{
+  "versionId": "bda20277-f377-40c9-8eba-c0ec94d57b3f",
+  "checkVersion": "independent-v1",
+  "layers": {
+    "runtime": {
+      "status": "passed",
+      "errors": []
+    },
+    "behavior": {
+      "status": "passed"
+    },
+    "semantic": {
+      "status": "passed",
+      "note": "固定独立参考规则，仅验证该演示规则"
+    },
+    "presentation": {
+      "status": "passed"
+    }
+  },
+  "steps": [
+    {
+      "name": "执行按钮产生可见状态变化",
+      "passed": true
+    },
+    {
+      "name": "重置恢复初始状态",
+      "passed": true
+    },
+    {
+      "name": "单步按钮产生中间状态",
+      "passed": true
+    },
+    {
+      "name": "LRU：零容量",
+      "passed": true
+    },
+    {
+      "name": "desktop 标题可见且无横向溢出",
+      "passed": true
+    },
+    {
+      "name": "mobile 标题可见且无横向溢出",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "desktop.png",
+    "mobile.png"
+  ],
+  "browser": "156.0.8078.4",
+  "durationMs": 818,
+  "isolation": {
+    "storage": true,
+    "network": true
+  },
+  "passed": true,
+  "id": "e19f97a4-2c57-4a9f-a8c1-d937bd98cfe2",
+  "updatedAt": "2026-10-22T23:42:20.043Z"
+}

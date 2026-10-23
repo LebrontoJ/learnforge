@@ -1,0 +1,72 @@
+{
+  "title": "二分查找：建立概念与直觉",
+  "goal": "理解二分查找的核心逻辑、区间维护方式及边界处理，通过交互演示掌握算法执行过程。",
+  "background": "读者具备基础编程经验，熟悉数组操作与基本循环逻辑。",
+  "scope": "介绍二分查找原理、闭区间 [left, right] 的操作规范、时间复杂度 O(log n) 及边界结束条件。",
+  "version": "固定评测规格 v1",
+  "family": "binary",
+  "points": [
+    {
+      "id": "point-1",
+      "name": "二分查找的基本原理",
+      "explanation": "二分查找要求数组必须有序。核心思想是维护一个搜索空间 [left, right]，每次比较中间值与目标值，若目标值较小则在左半部分继续查找，否则在右半部分查找，从而实现每步排除一半的查找空间。",
+      "example": "数组 [1, 3, 5, 7, 9]，目标值 3：中点下标为2，值5 > 3，排除右半区，将范围缩减至 [0, 1] 继续查找。",
+      "misconception": "认为查找区间的右边界应设置为数组长度 length 而非 length-1，导致越界错误。",
+      "sourceIds": [
+        "bbfd2089-439e-456b-92d1-3216b14e21c1"
+      ]
+    },
+    {
+      "id": "point-2",
+      "name": "循环终止条件与边界处理",
+      "explanation": "在闭区间 [left, right] 的维护中，循环的终止条件应为 left > right。若 left 等于 right 时退出循环，则会丢失数组中最后一个元素及其单元素区间的检查。",
+      "example": "当数组仅剩 [1] 且查找 1 时，left=0, right=0，此时应继续比较，直至 left 变为 1, right 仍为 0 时循环结束。",
+      "misconception": "误用 left < right 作为循环条件，导致无法匹配到位于数组末尾或仅存一个元素的数组区间。",
+      "sourceIds": [
+        "bbfd2089-439e-456b-92d1-3216b14e21c1"
+      ]
+    }
+  ],
+  "interaction": {
+    "enabled": true,
+    "purpose": "交互演示二分查找每一步的区间变化与中点命中情况。",
+    "inputs": [
+      "sorted_array",
+      "target_value"
+    ],
+    "states": [
+      "left_index",
+      "right_index",
+      "mid_index",
+      "current_search_space"
+    ],
+    "actions": [
+      "step_forward",
+      "reset_simulation",
+      "change_target"
+    ],
+    "expected": [
+      "实时可视化展示区间范围",
+      "标记每次比较的中点",
+      "显示每步排除的半区"
+    ],
+    "boundaries": [
+      "空数组应立即返回-1",
+      "left > right 时停止并判定未找到"
+    ]
+  },
+  "assumptions": [
+    "输入数组预先已排序",
+    "数组中的元素允许重复",
+    "查找返回任意一个匹配下标即可"
+  ],
+  "checks": [
+    "是否正确维护了 [left, right] 闭区间",
+    "是否处理了空数组异常",
+    "是否正确终止循环"
+  ],
+  "unverified": [
+    "针对海量数据的性能优化（如缓存友好性）",
+    "非整数类型数组的比较效率"
+  ]
+}
